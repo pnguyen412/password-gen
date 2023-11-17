@@ -7,9 +7,9 @@ function writePassword() {
   passwordText.value = password;
 }
 // Add event listener to generate button
-generateBtn.addEventListener("click", writePassword());
+generateBtn.addEventListener("click", writePassword);
 // Placeholder text displayed in display box
-document.getElementById("placeholder").value = password;
+document.getElementById("#password").textContent="Your Secure Password.";
 // Generating the Password
 function generatePassword() {
   let length = Number(prompt("How many characters will your password be? Enter a number between 8 and 128"));
@@ -19,16 +19,16 @@ function generatePassword() {
   let characterSet = "";
   let charTypeLower = charType.toLowerCase();
   if (charTypeLower === "lowercase") {
-      characterSet = "abcdefghijklmnopqrstuvwxyz";
-    } else if (charTypeLower === "uppercase") {
-      characterSet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    } else if (charTypeLower === "numeric") {
-      characterSet = "0123456789";
-    } else if (charTypeLower === "special") {
-      characterSet = " !\"#$%&'()*+,-./:;<=>?@[\]^_`{|}~";
-    } else if (charType === "all" || charType==="ALL") {
-      characterSet ="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!\"#$%&'()*+,-./:;<=>?@[\]^_`{|}~"
-    }
+    characterSet = "abcdefghijklmnopqrstuvwxyz";
+  } else if (charTypeLower === "uppercase") {
+    characterSet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  } else if (charTypeLower === "numeric") {
+    characterSet = "0123456789";
+  } else if (charTypeLower === "special") {
+    characterSet = "!\"#$%&'()*+,-./:;<=>?@[\]^_`{|}~";
+  } else if (charTypeLower === "all", "ALL") {
+      characterSet = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!\"#$%&'()*+,-./:;<=>?@[\]^_`{|}~";
+  }
   //Return value of generated password at random
   let returnVal = "";
   for (let i = 0; i < length; i++) {
