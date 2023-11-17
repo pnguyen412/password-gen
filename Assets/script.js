@@ -8,8 +8,7 @@ function writePassword() {
 }
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
-// Placeholder text displayed in display box
-document.getElementById("#password").textContent="Your Secure Password.";
+
 // Generating the Password
 function generatePassword() {
   let length = Number(prompt("How many characters will your password be? Enter a number between 8 and 128"));
@@ -37,5 +36,3 @@ function generatePassword() {
   }
   return returnVal;
 }
-//Displaying the Generated Password within the Display Box
-document.getElementById("password").value = password;
